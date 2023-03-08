@@ -11,12 +11,13 @@ public class FizzBuzz {
 //        Esempio: 1 2 Fizz 4 Buzz Fizz 7 8 Fizz……
 //        Bonus: invece che 100, chiedere all’utente quanti numeri vuole stampare (il valore inserito dall’utente deve essere maggiore di 0 e minore di 1000)
         Scanner input = new Scanner(System.in);
-
         int inputNum = 0;
         do{
             System.out.println("Insert a number between 0 and 1000");
             inputNum = Integer.parseInt(input.nextLine());
-        }while((inputNum <= 0) && (inputNum >1000));
+        }while((inputNum <= 0) || (inputNum >1000));
+        input.close();
+
         for (int i = 1; i <= inputNum; i++) {
             if ((i % 3) == 0 && (i % 5)== 0){
                 System.out.println("FizzBuzz");

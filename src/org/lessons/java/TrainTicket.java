@@ -24,6 +24,7 @@ public class TrainTicket {
         //pick up the String value and parse it to an int
         int age = Integer.parseInt(input.nextLine());
 
+        input.close();
         double priceToKm = 0.21;
         double totalPrice;
         DecimalFormat dec = new DecimalFormat("####.##");
